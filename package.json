@@ -1,7 +1,10 @@
 {
-  "name": "react-reveal",
+  "name": "@kogk/react-reveal",
   "version": "1.2.2",
   "author": "Roman Nosov <rnosov@gmail.com>",
+  "contributors": [
+    "Arnor Heidar <arnor@kosmosogkaos.is>"
+  ],
   "description": "Really simple way to add reveal on scroll animation to your React app.",
   "license": "MIT",
   "keywords": [
@@ -12,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rnosov/react-reveal"
+    "url": "https://github.com/KosmosOgKaos/react-reveal"
   },
   "bugs": {
-    "url": "https://github.com/rnosov/react-reveal/issues"
+    "url": "https://github.com/KosmosOgKaos/react-reveal/issues"
   },
-  "homepage": "https://www.react-reveal.com",
+  "homepage": "https://github.com/KosmosOgKaos/react-reveal",
   "main": "./index.js",
   "dependencies": {
     "prop-types": "^15.5.10"
@@ -51,9 +54,9 @@
     "uglify-js": "^2.7.3"
   },
   "scripts": {
-    "build": "./node_modules/gulp/bin/gulp.js build",
-    "test": "jest .",
-    "prepare": "npm run build && npm run test -- -u;",
-    "clean": "./node_modules/gulp/bin/gulp.js clean"
+    "build": "yarn gulp build",
+    "test": "jest . --testURL=http://localhost:1234",
+    "prepare": "yarn build && yarn test -- -u;",
+    "clean": "yarn gulp clean"
   }
 }
